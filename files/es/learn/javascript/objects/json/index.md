@@ -119,14 +119,14 @@ Anteriormente se mencionó que el texto JSON básicamente se parece a un objeto 
 ]
 ```
 
-Éste es un JSON perfectamente válido. Para acceder a esta version convertida se debe comenzar con un índice de arreglo, por ejemplo `[0]["powers"][0]`.
+Éste es un JSON perfectamente válido. Para acceder a esta version convertida se debe comenzar con un índice de array, por ejemplo `[0]["powers"][0]`.
 
 ### Otras notas
 
 - JSON es sólo un formato de datos — contiene sólo propiedades, no métodos.
 - JSON requiere usar comillas dobles para las cadenas y los nombres de propiedades. Las comillas simples no son válidas.
 - Una coma o dos puntos mal ubicados pueden producir que un archivo JSON no funcione. Se debe ser cuidadoso para validar cualquier dato que se quiera utilizar (aunque los JSON generados por computador tienen menos probabilidades de tener errores, mientras el programa generador trabaje adecuadamente). Es posible validar JSON utilizando una aplicación como [JSONLint](http://jsonlint.com/).
-- JSON puede tomar la forma de cualquier tipo de datos que sea válido para ser incluido en un JSON, no sólo arreglos u objetos. Así, por ejemplo, una cadena o un número único podrían ser objetos JSON válidos.
+- JSON puede tomar la forma de cualquier tipo de datos que sea válido para ser incluido en un JSON, no sólo arrays u objetos. Así, por ejemplo, una cadena o un número único podrían ser objetos JSON válidos.
 - A diferencia del código JavaScript en que las propiedades del objeto pueden no estar entre comillas, en JSON, sólo las cadenas entre comillas pueden ser utilizadas como propiedades.
 
 ## Aprendizaje activo: Trabajando a través de un ejemplo de JSON
@@ -263,14 +263,14 @@ function showHeroes(jsonObj) {
 }
 ```
 
-Para empezar, se almacena la propiedad `members` del objeto JavaScript en una nueva variable. Este arreglo contiene múltiples objetos que contienen la información para cada héroe.
+Para empezar, se almacena la propiedad `members` del objeto JavaScript en una nueva variable. Este array contiene múltiples objetos que contienen la información para cada héroe.
 
-A continuación, se utiliza un ciclo [for](/es/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop) para recorrer cada objeto en el arreglo. Para cada uno:
+A continuación, se utiliza un ciclo [for](/es/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop) para recorrer cada objeto en el array. Para cada uno:
 
 1. Se crean varios elementos nuevos: un `<article>`, un `<h2>`, tres `<p>`s, y una `<ul>`.
 2. Se asigna al `<h2>` para que muestre el `name` del héroe.
 3. Se completan los tres párrafos con su `secretIdentity`, `age`, y una línea que diga "Superpowers:" para introducir la información de la lista.
-4. Se almacena la propiedad `powers` en otra variable nueva llamada `superPowers` — que contiene un arreglo que lista los superpoderes del héroe actual.
+4. Se almacena la propiedad `powers` en otra variable nueva llamada `superPowers` — que contiene un array que lista los superpoderes del héroe actual.
 5. Para recorrer los superpoderes del héroe, se utiliza otro ciclo `for` — para cada uno se crea un elemento `<li>`, se asigna el superpoder a él y luego se pone el `listItem` dentro del elemento `<ul>` (`myList`) utilizando `appendChild()`.
 6. Lo último es agregar los `<h2>`, `<p>`s, y `<ul>` dentro del `<article>` (`myArticle`), luego se agrega `<article>` dentro de `<section>`. El orden en que las cosas son agregadas es importante, dado que este es el orden en el que aparecerán dentro del HTML.
 
